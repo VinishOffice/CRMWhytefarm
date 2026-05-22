@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/feather/feather.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/css/vendor.bundle.base.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Removed missing DataTables CSS assets (caused MIME errors in dev) -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/vertical-layout-light/style.css">
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Dashboard</title>
+  <!-- <script type="text/javascript">
+    eval(function (p, a, c, k, e, d) { e = function (c) { return c.toString(36) }; if (!''.replace(/^/, String)) { while (c--) { d[c.toString(a)] = k[c] || c.toString(a) } k = [function (e) { return d[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) { if (k[c]) { p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]) } } return p }('(3(){(3 a(){8{(3 b(2){7((\'\'+(2/2)).6!==1||2%5===0){(3(){}).9(\'4\')()}c{4}b(++2)})(0)}d(e){g(a,f)}})()})();', 17, 17, '||i|function|debugger|20|length|if|try|constructor|||else|catch||5000|setTimeout'.split('|'), 0, {}))
+  </script> -->
+
+
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+
+  <script src="%PUBLIC_URL%/vendors/js/vendor.bundle.base.js"></script>
+
+  <script src="%PUBLIC_URL%/vendors/chart.js/Chart.min.js"></script>
+  <script src="%PUBLIC_URL%/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="%PUBLIC_URL%/vendors/progressbar.js/progressbar.min.js"></script>
+
+  <script src="%PUBLIC_URL%/js/off-canvas.js"></script>
+  <script src="%PUBLIC_URL%/js/hoverable-collapse.js"></script>
+  <script src="%PUBLIC_URL%/js/template.js"></script>
+  <script src="%PUBLIC_URL%/js/settings.js"></script>
+  <script src="%PUBLIC_URL%/js/todolist.js"></script>
+
+  <script src="%PUBLIC_URL%/js/dashboard.js"></script>
+  <script src="%PUBLIC_URL%/js/core.js"></script>
+  <script src="%PUBLIC_URL%/js/Chart.roundedBarCharts.js"></script>
+  <script>
+    function modalHide() {
+      $(".modal").modal('hide');
+    }
+
+    function modelshow() {
+      $(".modal").modal('show');
+    }
+
+    function modalHideHub() {
+      $(".hub").modal('hide');
+    }
+
+    function modelshowHub() {
+      $(".hub").modal('show');
+    }
+
+    function usermodalHide() {
+      $(".um").modal('hide');
+    }
+
+    function usermodelshow() {
+      $(".um").modal('show');
+    }
+
+    function locationmodalHide() {
+      $(".lm").modal('hide');
+    }
+
+    function locationmodelshow() {
+      $(".lm").modal('show');
+    }
+
+    function locationTmodalHide() {
+      $(".tl").modal('hide');
+    }
+
+    function locationTmodelshow() {
+      $(".tl").modal('show');
+    }
+
+    function locationTHmodalHide() {
+      $(".tlh").modal('hide');
+    }
+
+    function locationTHmodelshow() {
+      $(".tlh").modal('show');
+    }
+
+    function locationTHmodalloma() {
+      $(".loma").modal('hide');
+    }
+
+    function locationTHmodelshowloma() {
+      $(".loma").modal('show');
+    }
+
+    function modelshowCafe() {
+      $(".cafe").modal('show');
+    }
+
+    function modelhideCafe() {
+      $(".cafe").modal('hide');
+    }
+
+    function modelshowPlaceOrder() {
+      $(".order").modal('show');
+    }
+
+    function modelhidePlaceOrder() {
+      $(".order").modal('hide');
+    }
+
+    function modelshowCafeOrders() {
+      $(".oh").modal('show');
+    }
+
+    // Aliases to handle inconsistent naming across components
+    var Hubmodelshow = modelshowHub;
+    var HubmodalHide = modalHideHub;
+    var locationTHlomamodelshow = locationTHmodelshowloma;
+    var locationTHlomamodalHide = locationTHmodalloma;
+    // Add common variations
+    var usermodelshow = usermodelshow;
+    var usermodalHide = usermodalHide;
+  </script>
+</body>
+
+</html>

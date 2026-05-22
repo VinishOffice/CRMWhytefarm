@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Cache
+.cache/
+frontend/node_modules/.cache/
+
+# Build outputs
+build/
+frontend/build/
+
+# Misc
+.DS_Store
+.env
